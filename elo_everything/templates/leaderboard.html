@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELO Everything - Leaderboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>ELO Everything - Leaderboard</h1>
+    <table id="leaderboard-table">
+        <thead>
+            <tr>
+                <th>Concept</th>
+                <th>ELO Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for concept in concepts %}
+            <tr>
+                <td>{{ concept.name }}</td>
+                <td>{{ concept.elo_score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ url_for('index') }}">Back to voting</a>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
