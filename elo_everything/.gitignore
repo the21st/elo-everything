@@ -1,0 +1,42 @@
+# .gitignore
+
+# Ignore Python build artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+
+# Ignore Flask file
+instance/
+
+# Ignore SQLAlchemy file
+*.db
+
+# Ignore deployment related files
+.DS_Store
+.env
+*.log
+*.pot
+*.po
+*.mo
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+*.egg
+*.swp
+*.swo
+
+# Ignore IDE related files
+.idea/
+*.iml
+*.iws
+
+# Ignore fly.io related files
+.fly/

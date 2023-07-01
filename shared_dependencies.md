@@ -1,29 +1,23 @@
-1. Exported Variables:
-   - `app` (Flask application instance) in `website.py`
-   - `db` (Database instance) in `models.py`
+1. Dependencies: These are shared across all Python files and are listed in "requirements.txt". They include Flask, SQLAlchemy, BeautifulSoup, requests, etc.
 
-2. Data Schemas:
-   - `Concept` (Schema for the concepts like "Water", "Common Cold", etc.) in `models.py`
-   - `Score` (Schema for the ELO scores of each concept) in `models.py`
+2. Database Models: "concept.py", "user.py", and "vote.py" define the data schemas for the concepts, users, and votes respectively. These are used across the application.
 
-3. ID Names of DOM Elements:
-   - `concept1` and `concept2` (The two concepts to be compared) in `index.html`
-   - `vote-button1` and `vote-button2` (Buttons to vote for a concept) in `index.html`
-   - `leaderboard-table` (Table to display the leaderboard) in `leaderboard.html`
+3. Wiki Scraper: The function "scrape_wiki" in "wiki_scraper.py" is used in "app.py" to pull data from Wikipedia.
 
-4. Message Names:
-   - `vote_success` (Message displayed when a vote is successfully cast) in `views.py`
-   - `vote_error` (Message displayed when there is an error in casting a vote) in `views.py`
+4. ELO Calculator: The function "calculate_elo" in "elo_calculator.py" is used in "app.py" to calculate ELO scores.
 
-5. Function Names:
-   - `get_random_concepts` (Function to get two random concepts) in `utils.py`
-   - `calculate_elo` (Function to calculate ELO scores) in `elo_calculator.py`
-   - `scrape_wikipedia` (Function to scrape data from Wikipedia) in `wikipedia_scraper.py`
-   - `index` (Function to render the main page) in `views.py`
-   - `leaderboard` (Function to render the leaderboard page) in `views.py`
-   - `vote` (Function to handle voting) in `views.py`
+5. DOM Elements: The "index.html" and "leaderboard.html" files contain DOM elements with ids such as "concept1", "concept2", "vote-button", "leaderboard-table" which are used in "main.js".
 
-6. Test Function Names:
-   - `test_get_random_concepts` in `test_website.py`
-   - `test_calculate_elo` in `test_elo_calculator.py`
-   - `test_scrape_wikipedia` in `test_wikipedia_scraper.py`
+6. CSS Styles: The "main.css" file contains styles that are used across the HTML templates.
+
+7. JavaScript Functions: The "main.js" file contains functions like "vote", "loadConcepts", "updateLeaderboard" that are used across the HTML templates.
+
+8. Dockerfile: This file is used to build a Docker image for the application, which is used in the deployment pipeline.
+
+9. fly.toml: This file contains configuration for the fly.io deployment pipeline.
+
+10. Procfile: This file is used by Heroku or other platforms to start the application.
+
+11. .gitignore: This file lists files and directories that should be ignored by Git, shared across the project.
+
+12. README.md: This file contains instructions for setting up and running the application, which are relevant across the project.

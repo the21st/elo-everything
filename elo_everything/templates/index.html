@@ -5,29 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELO Everything</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
     <header>
         <h1>ELO Everything</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        </nav>
     </header>
     <main>
         <section id="concept-selection">
-            <h2>Choose your favorite concept</h2>
             <div id="concept1">
-                <h3>{{ concept1.name }}</h3>
+                <h2>{{ concept1.name }}</h2>
                 <img src="{{ concept1.image_url }}" alt="{{ concept1.name }}">
-                <button id="vote-button1" onclick="vote('{{ concept1.id }}')">Vote</button>
+                <p>{{ concept1.description }}</p>
             </div>
             <div id="concept2">
-                <h3>{{ concept2.name }}</h3>
+                <h2>{{ concept2.name }}</h2>
                 <img src="{{ concept2.image_url }}" alt="{{ concept2.name }}">
-                <button id="vote-button2" onclick="vote('{{ concept2.id }}')">Vote</button>
+                <p>{{ concept2.description }}</p>
             </div>
+            <button id="vote-button" onclick="vote()">Vote</button>
         </section>
     </main>
     <footer>
-        <a href="{{ url_for('leaderboard') }}">View Leaderboard</a>
+        <p>© 2022 ELO Everything. All rights reserved.</p>
     </footer>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

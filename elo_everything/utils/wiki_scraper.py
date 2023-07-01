@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-def scrape_wikipedia(concept):
+def scrape_wiki(concept):
     url = f"https://en.wikipedia.org/wiki/{concept}"
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -18,9 +18,9 @@ def scrape_wikipedia(concept):
     table = soup.find('table', class_='infobox')
     if table:
         image = table.find('img')
-        image_src = f"https:{image['src']}" if image else None
+        image_url = f"https:{image['src']}" if image else None
     else:
-        image_src = None
+        image_url = None
 
-    return description, image_src
+    return description, image_url
 ```
