@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #50b3a2;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+#showcase {
+    min-height: 400px;
+    background: url('../img/showcase.jpg') no-repeat 0 -400px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+#showcase p {
+    font-size: 20px;
+}
+
+#leaderboard {
+    padding: 30px;
+    color: #333333;
+    background: #ffffff;
+}
+
+#leaderboard h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#leaderboard-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#leaderboard-table th, #leaderboard-table td {
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+#leaderboard-table th {
+    background-color: #f4f4f4;
+}
+
+#leaderboard-table td {
+    text-align: center;
+}
+
+#concept1, #concept2 {
+    width: 45%;
+    margin: 2.5%;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+#concept1 img, #concept2 img {
+    width: 100%;
+    height: auto;
+}
+
+#vote-button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background: #50b3a2;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+#vote-button:hover {
+    background: #e8491d;
+    cursor: pointer;
+}

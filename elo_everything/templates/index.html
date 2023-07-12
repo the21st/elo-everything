@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELO Everything</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+    <header>
+        <h1>ELO Everything</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('leaderboard') }}">Leaderboard</a>
+        </nav>
+    </header>
+    <main>
+        <section id="concept-selection">
+            <div id="concept1">
+                <h2>{{ concept1.name }}</h2>
+                <img src="{{ concept1.image_url }}" alt="{{ concept1.name }}">
+                <p>{{ concept1.description }}</p>
+            </div>
+            <div id="concept2">
+                <h2>{{ concept2.name }}</h2>
+                <img src="{{ concept2.image_url }}" alt="{{ concept2.name }}">
+                <p>{{ concept2.description }}</p>
+            </div>
+            <button id="vote-button" onclick="vote()">Vote</button>
+        </section>
+    </main>
+    <footer>
+        <p>© 2022 ELO Everything. All rights reserved.</p>
+    </footer>
+</body>
+</html>

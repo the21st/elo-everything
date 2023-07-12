@@ -1,0 +1,16 @@
+[build]
+  image = "python:3.9-slim-buster"
+
+[env]
+  PORT = "5000"
+
+[experimental]
+  private_network = true
+
+[[services]]
+  internal_port = 5000
+  protocol = "tcp"
+  script = "python app.py"
+
+[deploy]
+  release_command = "flask db upgrade"
